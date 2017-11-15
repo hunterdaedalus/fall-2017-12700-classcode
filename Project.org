@@ -2,7 +2,7 @@
 *** Specifications
 - Two person groups
 - make a single folder in one of your homework reps. Name it
-  **project**
+  *project*
 - Make sure to add your partner as a collaborator. I expect to see
   commits from both users throughout the course of the project.
 - The folder should contain a README.md file which should contain:
@@ -15,7 +15,7 @@
 *** Basic requirements
 **** Choice 1
 - Start with the Inverted Index 
-- Add the ability to do **AND**, **NOT** and **OR** queries.
+- Add the ability to do *AND*, *NOT* and *OR* queries.
 - Find or create an alternate data set from offenders-cleaned.csv
 **** Choice 2
 - Start with the Text generator
