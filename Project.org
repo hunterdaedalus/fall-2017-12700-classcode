@@ -1,0 +1,44 @@
+* Inverted Index Project
+*** Specifications
+- Two person groups
+- make a single folder in one of your homework reps. Name it
+  **project**
+- Make sure to add your partner as a collaborator. I expect to see
+  commits from both users throughout the course of the project.
+- The folder should contain a README.md file which should contain:
+  - The names of both group members
+  - A description of the project
+  - Instructions as to how to run/test the project
+- For a top grade you will be expected to extend the project using a
+  tool, library, or technique we didn't cover in class. This will be
+  described in the extended requirements section below.
+*** Basic requirements
+**** Choice 1
+- Start with the Inverted Index 
+- Add the ability to do **AND**, **NOT** and **OR** queries.
+- Find or create an alternate data set from offenders-cleaned.csv
+**** Choice 2
+- Start with the Text generator
+- Break up the text into n-grams (2, 3, 4 as needed)
+- Analyze the text or multiple texts in interesting ways:
+  - Look for names (how would you find a name?) and where they appear
+    alone and with each other.
+  - Are some phrases (2-grams, 3-grams, etc) common? Common across
+    texts?
+ 
+*** Extended requirements
+Here are some ways you should extend the project. You don't have to do
+all of them and if you have other ideas, speak to the instructor about them.
+- Look at most common words after removing words in a stop word list
+  (http://www.lextek.com/manuals/onix/stopwords1.html).
+- Add a stemming library and use that in your word searches.
+- Look up a simple stemming algorithm and implement it.
+- Put it up as a web app (Flask) - for example use a form to input a
+  query to the data set.
+- Use a graph library to visualize some of your explorations
+
+*** Alternate project 
+You may propose an alternate project to the one specified here but
+make sure that you have the instructors approval prior to
+starting. Any proposed alternate project must make use of the same set
+of tools and techniques as the inverted index project does.
