@@ -15,6 +15,10 @@
 *** Basic requirements
 **** Choice 1
 - Start with the Inverted Index 
+- Store (and use) additional info in the index such as:
+  - how many times each word occurs (use a tuple)
+  - The position of the word (where it starts)
+  - Storing the stemmed word instead of all the words
 - Add the ability to do *AND*, *NOT* and *OR* queries.
 - Find or create an alternate data set from offenders-cleaned.csv
 **** Choice 2
