@@ -1,4 +1,4 @@
-* Inverted Index Project
+* Project
 *** Specifications
 - Two person groups
 - make a single folder in one of your homework reps. Name it
