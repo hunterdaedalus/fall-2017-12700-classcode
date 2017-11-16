@@ -1,11 +1,16 @@
 * Project
 *** Specifications
 - Two person groups
-- make a single folder in one of your homework reps. Name it
-  *project*
+- One person should make a new project repo under GitHub. Remember to
+  add a .gitignore.
 - Make sure to add your partner as a collaborator. I expect to see
   commits from both users throughout the course of the project.
-- The folder should contain a README.md file which should contain:
+- The partner should clone the repo so they have a copy of it but all
+  work should take place in the original main repo.
+- Both group members should:
+  - create a folder named "project" in their homework repo
+  - add a README.md file that contains a link to the actual projecct
+- The project should contain a README.md file which should contain:
   - The names of both group members
   - A description of the project
   - Instructions as to how to run/test the project
