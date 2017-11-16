@@ -15,10 +15,6 @@
 *** Basic requirements
 **** Choice 1
 - Start with the Inverted Index 
-- Store (and use) additional info in the index such as:
-  - how many times each word occurs (use a tuple)
-  - The position of the word (where it starts)
-  - Storing the stemmed word instead of all the words
 - Add the ability to do *AND*, *NOT* and *OR* queries.
 - Find or create an alternate data set from offenders-cleaned.csv
 **** Choice 2
@@ -40,6 +36,10 @@ all of them and if you have other ideas, speak to the instructor about them.
 - Put it up as a web app (Flask) - for example use a form to input a
   query to the data set.
 - Use a graph library to visualize some of your explorations
+- Store (and use) additional info in the inverted index such as:
+  - how many times each word occurs (use a tuple)
+  - The position of the word (where it starts)
+  - Storing the stemmed word instead of all the words
 
 *** Alternate project 
 You may propose an alternate project to the one specified here but
