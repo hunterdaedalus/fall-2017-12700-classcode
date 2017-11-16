@@ -20,7 +20,7 @@
 **** Choice 2
 - Start with the Text generator
 - Break up the text into n-grams (2, 3, 4 as needed)
-- Analyze the text or multiple texts in interesting ways:
+- Analyze the text or better, multiple texts in interesting ways:
   - Look for names (how would you find a name?) and where they appear
     alone and with each other.
   - Are some phrases (2-grams, 3-grams, etc) common? Common across
@@ -40,6 +40,7 @@ all of them and if you have other ideas, speak to the instructor about them.
   - how many times each word occurs (use a tuple)
   - The position of the word (where it starts)
   - Storing the stemmed word instead of all the words
+- Experiment with n-grams for the inverted index
 
 *** Alternate project 
 You may propose an alternate project to the one specified here but
