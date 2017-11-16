@@ -1,10 +1,6 @@
 import random
 
-def remove_non_alpha(w):
-    """
-    input: w - string representing a "word"
-    output: the string with non alpha chars removed
-    """
+def rp(w):
     result=""
     for l in w:
         if l.isalpha():
@@ -17,35 +13,28 @@ def bwcd(wordlist):
         d.setdefault(w,0)
         d[w] = d[w] + 1
     return d
-
+    
 def build_word_chain_dict(wordlist):
     d={}
-    for i in range(1,len(wordlist)):
+    for i in range (1,len(wordlist)):
         w1 = wordlist[i-1]
         w2 = wordlist[i]
         d.setdefault(w1,[])
         d[w1].append(w2)
-        
+        #d[w] = d[w] + 1
     return d
-
-
 
 def bwcff(f):
-    """
-    input: f - string representing a filename
-    returns: a dictionary with keys for words and values
-             of the number of times each word occursb
-    """
-    text = open(f).read()
+    f = open(f).read()
     l=[]
-    for w in text.split():
+    for w in f.split():
         w = w.lower()
-        w = remove_non_alpha(w)
+        w = rp(w)
         l.append(w)
-    d = build_word_chain_dict(l)
+    d = build_trigram_dict(l)
     return d
 
-def generate_text(d,start_word,length=50):
+def generate_text(d,start_word,length=50): # how many words we want this text to be, and the first word of text
     wordlist = []
     next = start_word
     for i in range(length):
@@ -53,9 +42,28 @@ def generate_text(d,start_word,length=50):
             break
         wordlist.append(next)
         next = random.choice(d[next])
-    return " ".join(wordlist)
+    return " " . join(wordlist)
 
+def build_trigram_dict(wordlist):
+    d = {}
+    for i in range(0,len(wordlist)-2): #why did this happen
+       # a = wordlist[0]
+       # b = wordlist[1]
+       # c = wordlist[2]
+       (a,b,c) = (wordlist[0],wordlist[1], wordlist[2])
+       tuple = (a,b)
+       d.setdefault(tuple,[])
+       d[tuple].append(c)
+    return d
+
+def build_ngrams(worldlist,prelength):
+    d = {}
+    for i in range(0,len(wordlist)-prelength):
+        sublist = wordlist[i:i+prelength]
+        t = tupile(sublist[0:len(sublist)-1])
 
 hamlet = bwcff("hamlet.txt")
-psalms = bwcff("psalms.txt")
-sonnets = bwcff("sonnets.txt")
+psalms = bwcff("psalms.txt.")
+
+#d = bwcff("hamlet.txt")
+#print(bwcff("hamlet.txt"))
