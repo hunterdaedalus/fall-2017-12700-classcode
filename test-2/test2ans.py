@@ -18,10 +18,25 @@ sample_routes = {'LAX': ['SFO', 'ATL'],
 
 
 def create_routes(airports):
-    pass
+    routes = {}
+    for airport in airports:
+        routes.setdefault(airport,[])
+        num = 1 + random.randrange(1,len(airports)/2)
+        while num > 0:
+            choice = random.choice(airports)
+            if choice != airport and choice not in routes[airport]:
+                routes[airport].append(choice)
+                num = num - 1
+    return routes
 
 def two_hops(routes,start,end):
-    pass
+    if end in routes[start]:
+        return True
+    for airport in routes[start]:
+        if end in routes[airport]:
+            return True
+    return False
+
 #########################################################################
 
 
@@ -40,14 +55,32 @@ rangelist = build_rangelist()
 
 
 def overlap(r1,r2):
-    pass
+    (x,y) = r1
+    (a,b) = r2
+    # return not (b < x or a > y)
+    if  b < x or a > y:
+        return False
+    else:
+        return True
 
+    
 def merge(r1,r2):
-    pass
+    a = min(r1[0],r2[0])
+    b = max(r1[1],r2[1])
+    return [a,b]
 
 # add_range(rangelist,newrange)
 def add_range(rangelist,newrange):
-    pass
+    # First find the spot
+    i = 0
+    while i < len(rangelist) and newrange[0] > rangelist[i][1]:
+        i = i + 1
+    while i < len(rangelist) and overlap(newrange,rangelist[i]):
+        newrange = merge(newrange,rangelist[i])
+        del rangelist[i]
+    rangelist.insert(i,newrange)
+        
+    
 
 
 
