@@ -11,8 +11,10 @@ using std::endl;
 
 int main()
 {
+  cout << time(0) << endl;
+  srand(time(0));
   for (int i = 0; i < 10; ++i) {
-    cout << i << endl;
+    cout << rand()%10 << endl;
   
   }
   std::string s = "Hello World";
